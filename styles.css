@@ -8,13 +8,37 @@
     font-family: "Poppins", sans-serif;
 }
 
+.container{
+   max-width: 1080px;
+    margin: 0 auto;
+}
+
 #home{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
+
+nav{
+    top: 0;
+    position: fixed;
+    width: 1080px;
+    margin: 0 auto;
+    height: 80px;
+    z-index: 10;
+} 
+
+#nav-mobile{
+    display: none;
+}
+
 
 .nav-bar{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -24,7 +48,7 @@
 }
 
 .links{
-   margin: 20px 30px;
+    margin: 20px 30px;
 }
 
 .links a{
@@ -34,7 +58,7 @@
 
 hr{
     width: 6rem;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .intro{
@@ -42,41 +66,53 @@ hr{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 4rem;
 }
 
 .intro img{
     border-radius: 50%;
     width: 10rem;
     border: 2px solid #fff;
-    margin: 2rem;
+    margin: 3rem;
 }
 
 .intro h4{
     font-size: 20px;
+    font-weight: bold;
 }
 
 .intro p{
     margin: 20px;
-    width: 500px;
+    max-width: 500px;
+    margin-bottom: 100px;
 }
+
+#skills{
+    height: 100vh;
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#skills p {
+    text-align: center;
+    margin: 20px;
+  }
 
 .tech-images{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: space-around;
-    margin: 30px 40px;
-}
-
-h2{
-    margin: 40px;
+    justify-content: center;
+    margin: 20px 40px;
 }
 
 .skill-content{
-    margin: 40px 0;
+    margin: 20px 40px;
 }
 
 .skill-content img{
@@ -84,57 +120,56 @@ h2{
     border-radius: 50%;
     transition: 0.5s;
     width: 10rem;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #projects {
     margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 .project-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .project-img{
-    width: 25rem;
-    height: 15rem;
-    margin: 20px;
+    width: 20rem;
+    height: 10rem;
+    margin: 20px 10px;
     border: 2px solid #fff;
     border-radius: 15px;
 }
 
 .project-card{
     text-align: center;
+    flex: 0 40%;
 }
 
 .project-text a{
     text-decoration: none;
-    margin: 10px 30px;
+    margin: 10px 20px;
 }
 
-.project-container button{
-    position: absolute;
-    top: 190%;
-    width: 40px;
-    height: 40px;
-    margin: 30px 10%;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10px;
-    cursor: pointer;
-}
-
-.prev{
-    left: 2%;
-}
-  
-.next{
-    right: 2%;
+#contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .form{
-    margin: 40px;
+    margin: 30px;
     text-align: center;
 }
 
@@ -160,6 +195,17 @@ h2{
     margin: 20px 80px;
     gap: 40px;
     font-size: 25px;
+}
+
+.top{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    /* top: 10%; */
+    left: 90%;
+    display: none;
 }
 
 footer{
@@ -198,4 +244,23 @@ footer{
 .contact-info i:hover{
     color: #716d6d;
     cursor: pointer;
+}
+
+/* media queries */
+@media only screen and (max-width: 800px){
+
+    #nav-mobile{
+        display: block;
+        float: right;
+        margin-right: 2rem;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .links.active{
+        display: flex;
+        flex-direction: column;
+    }
 }
