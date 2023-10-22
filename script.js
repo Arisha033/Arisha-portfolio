@@ -1,10 +1,9 @@
-const button = document.querySelector("#nav-mobile");
-const navLinks = document.querySelector(".links");
+const toggleBtn = document.querySelector('.toggle-button');
+const navLinks = document.querySelector('.nav-links');
 
 // navbar toggle
-const navBtn = document.querySelector('#nav-mobile');
-navBtn.addEventListener('click', function(){
-    console.log("hey");
+toggleBtn.addEventListener('click', function(){
+  navLinks.classList.toggle('active');
 })
 
 // function to show top button
