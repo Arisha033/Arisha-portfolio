@@ -1,10 +1,10 @@
-const toggleBtn = document.querySelector('.toggle-button');
-const navLinks = document.querySelector('.nav-links');
+const toggleBtn = document.querySelector(".toggle-button");
+const navLinks = document.querySelector(".nav-links");
 
 // navbar toggle
-toggleBtn.addEventListener('click', function(){
-  navLinks.classList.toggle('active');
-})
+toggleBtn.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+});
 
 // function to show top button
 const topBtn = document.querySelector(".top");
